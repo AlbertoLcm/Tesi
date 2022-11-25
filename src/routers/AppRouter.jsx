@@ -3,10 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import routes from "../helpers/routes";
 import Login from "../pages/Login";
 import Talleres from "../pages/Talleres";
+import TalleresDocente from "../pages/TalleresDocente";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 import Taller from "../pages/Taller";
 import Registro from "../pages/Registro";
+import LoginDocente from "../pages/LoginDocente"
 
 function AppRouter() {
   return (
@@ -17,9 +19,19 @@ function AppRouter() {
             <Talleres />
           </PrivateRoute>
         } />
+        <Route path={routes.talleresdocente} element={
+          <PublicRoute>
+            <TalleresDocente />
+          </PublicRoute>
+        } />
         <Route path={routes.login} element={
           <PublicRoute>
             <Login />
+          </PublicRoute>
+        } />
+        <Route path={routes.logindocente} element={
+          <PublicRoute>
+            <LoginDocente />
           </PublicRoute>
         } />
         <Route path={'/registro/:id'} element={

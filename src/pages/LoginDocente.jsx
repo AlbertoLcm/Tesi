@@ -5,7 +5,7 @@ import useAuth from "../auth/useAuth";
 import "../stylesheets/Login.css";
 
 
-function Login() {
+function LoginDocente() {
   const { login } = useAuth();
   const location = useLocation();
   /** @type React.MutableRefObject<HTMLInputElement> */
@@ -34,7 +34,7 @@ function Login() {
       <div className="contDegradado">
         <div className="contLogin">
           <div className="login">
-            <h2>Bienvenido</h2>
+            <h2>Bienvenido Docente</h2>
             <form onSubmit={actionLogear} method="POST" className="form-group">
                 <input
                   id="email"
@@ -54,11 +54,10 @@ function Login() {
                   value={userCredentials.password}
                   required
                 />
-              <button type="submit" className="boton1">
+              <Link to={routes.talleresdocente} className="boton1">
                 Ingresar
-              </button>
+              </Link>
             </form>
-            <Link to={routes.logindocente} className="link">Ingresar como docente</Link>
           </div>
         </div>
       </div>
@@ -66,4 +65,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginDocente;
