@@ -7,6 +7,9 @@ function Home() {
   return (
     <>
       <Sidebar />
+      <header>
+        <h1>Tesi</h1>
+      </header>
       <div id="ContenedorHome">
         <section className="">
           <Link to={'/talleres'} className="link">Talleres</Link>
