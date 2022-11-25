@@ -47,10 +47,19 @@ body.open .overlay {
   }
 }
 
-.burger-avatar {
-  width: 30px;
-  height: 30px;
+.contAvatar{
+  width: 80px;
+  height: 80px;
+  background-color: aquamarine;
+  border-radius: 50%;
+  overflow: hidden;
   transition: 0.4s;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+}
+.burger-avatar {
+  width: 100%;
+  height: auto;
 }
 
 body.open .burger-avatar {
@@ -87,6 +96,7 @@ body.open .burger-icon {
   filter: blur(10px);
   transition-property: filter, visibility, opacity;
   transition-duration: 0.6s;
+  position: fixed;
 }
 
 @media (width >= 330px) {
@@ -122,9 +132,9 @@ body.open .sidebar {
 }
 
 .sidebar-avatar {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 .sidebar-username {

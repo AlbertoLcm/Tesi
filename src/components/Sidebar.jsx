@@ -1,6 +1,6 @@
 import React from "react";
 import '../stylesheets/components/Sidebar.css';
-import avatar from "../assets/avatar.png" ;
+import avatar from "../assets/avatar.jpg" ;
 import iconHome from "../assets/icon-home.svg";
 import iconSettings from "../assets/icon-settings.svg";
 import iconAccounts from "../assets/icon-accounts.svg";
@@ -10,32 +10,36 @@ function Sidebar() {
   return (
     <>
       <button type="button" class="burger" onclick="toggleSidebar()">
-        <img src={avatar} class="burger-avatar" alt="icon"/>
+        <div className="contAvatar">
+          <img src={avatar} class="burger-avatar" alt="icon"/>
+        </div>
         <span class="burger-icon"></span>
       </button>
       <div class="overlay"></div>
       <aside class="sidebar">
-        <img class="sidebar-avatar" src={avatar} alt="icon" />
-        <div class="sidebar-username">frontendjoe</div>
-        <div class="sidebar-role">Frontend Developer</div>
+        <div className="contAvatar">
+          <img class="sidebar-avatar" src={avatar} alt="icon" />
+        </div>
+        <div class="sidebar-username">Nombre</div>
+        <div class="sidebar-role">Carrera</div>
         <nav class="sidebar-menu">
           <button type="button">
             <img src={iconHome} alt="icon" />
-            <span>Home</span>
+            <span>Inicio</span>
           </button>
           <button type="button">
             <img src={iconSettings} alt="icon" />
-            <span>Settings</span>
+            <span>Ajustes</span>
           </button>
           <button type="button">
             <img src={iconAccounts} alt="icon" />
-            <span>Profile</span>
+            <span>Perfil</span>
           </button>
         </nav>
         <nav class="sidebar-menu bottom">
           <button type="button">
             <img src={iconLock} alt="icon" />
-            <span>Sign Out</span>
+            <span>Salir</span>
           </button>
         </nav>
       </aside>
