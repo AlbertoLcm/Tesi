@@ -5,8 +5,11 @@ import iconHome from "../assets/icon-home.svg";
 import iconSettings from "../assets/icon-settings.svg";
 import iconAccounts from "../assets/icon-accounts.svg";
 import iconLock from "../assets/icon-lock.svg";
+import useAuth from "../auth/useAuth";
 
 function Sidebar() {
+  const { logout } = useAuth();
+  
   return (
     <>
       <button type="button" class="burger" onclick="toggleSidebar()">
@@ -28,16 +31,12 @@ function Sidebar() {
             <span>Inicio</span>
           </button>
           <button type="button">
-            <img src={iconSettings} alt="icon" />
-            <span>Ajustes</span>
-          </button>
-          <button type="button">
             <img src={iconAccounts} alt="icon" />
             <span>Perfil</span>
           </button>
         </nav>
         <nav class="sidebar-menu bottom">
-          <button type="button">
+          <button type="button" onClick={() => logout()}>
             <img src={iconLock} alt="icon" />
             <span>Salir</span>
           </button>
