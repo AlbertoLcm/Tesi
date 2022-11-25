@@ -101,6 +101,7 @@ header h1{
   .informacion{
     background-color: #0d7e384b;
     border-radius: 10px;
+    height: auto;
     padding: 20px;
   }
   .informacion h3{
@@ -109,6 +110,18 @@ header h1{
   .informacion .titulo{
     padding: 10px;
     font-weight: 550;
+  }
+
+  .contenedorDatos{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #0d7e384b;
+    border-radius: 10px;
+  }
+
+
+  .contenedorDatos p{
+    padding: 20px;
   }
   
   .contenedorGrafica{
@@ -120,7 +133,6 @@ header h1{
 
   .titulo{
     border-radius: 5px;
-    width: 80%;
     display: flex;
     padding: 20px;
   }
@@ -129,12 +141,9 @@ header h1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    padding-bottom: 20px;
   }
   .tituloTaller{
-    background-image: url('../images/culturales.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     font-size: 20px;
     font-weight: 500;
     border-radius: 10px;
@@ -143,6 +152,13 @@ header h1{
     margin-bottom: 10px;
     height: 60px;
     position: relative;
+  }
+  .tituloTaller img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
   }
   .tituloTaller p{
     display: flex;
@@ -165,7 +181,6 @@ header h1{
     user-select: none;
     transition: 0.4s;
     cursor: pointer;
-    /* añadimos una sombra */
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
   .contImagenTaller{
@@ -190,13 +205,14 @@ header h1{
   }
   .targetaTaller .ver{
     color: royalblue;
-    font-size: 16px;
-    font-weight: 550;
     margin-top: 5px;
+    padding-left: 10px;
   }
-  .targetaTaller button{
+  .targetaTaller .buttonLink{
     width: calc(100% - 20px);
     border: none;
+    display: block;
+    text-decoration: none;
     background-color: #0d7e38;
     color: #f3f3f3;
     padding: 10px;
@@ -205,7 +221,77 @@ header h1{
     cursor: pointer;
     transition: 0.4s;
   }
-  .targetaTaller button:hover{
+  .targetaTaller .button:hover{
     background-color: #0d7e38c0;
   }
 /* FIN Targetas de talleres */
+
+
+.contenedorGeneralTaller{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 180px);
+  height: 100vh;
+}
+
+#ContenedorTaller{
+  width: 70%;
+  padding: 20px;
+  padding-top: 60px;
+}
+#ContenedorTaller h2{
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 550;
+}
+#ContenedorTaller p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+#ContenedorTaller button{
+  width: 100%;
+  border: none;
+  background-color: #0d7e38;
+  color: #f3f3f3;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#ContenedorRegistro{
+  width: 70%;
+  padding: 20px;
+  padding-top: 60px;
+}
+#ContenedorRegistro form{
+  display: flex;
+  flex-direction: column;
+}
+#ContenedorRegistro form input{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #0d7e38;
+  outline: none;
+  transition: 0.4s;
+}
+#ContenedorRegistro form input:focus{
+  border: 1px solid #0d7e38c0;
+}
+#ContenedorRegistro form button{
+  width: calc(100% - 20px);
+  border: none;
+  background-color: #0d7e38;
+  color: #f3f3f3;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
