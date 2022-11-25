@@ -1,0 +1,49 @@
+/* Estilos del Header */
+    #hderPagInicial {
+        display: flex;
+        gap: 50px;
+        padding: 10px 180px 10px 10px;
+    }.contImgLogoHd{
+        height: 80px;
+    }.contImgLogoHd > img {
+        width:auto;
+        height: 100%;
+    }
+/* Fin Estilis del Header */
+/* Estilos de los contactos */
+    .contContactos {
+        position: absolute;
+        display: flex;
+        width:100%;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 190px;
+        gap: 10px;
+    }
+    .contContacto {
+        padding:5px;
+        background-color: #38b81180;
+        border-radius: 50%;
+    }
+/*Fin de los estilos de los contactos */
+/*Para la seccion de noticias*/
+    /*Para que tenga la forma que quiero*/
+        .contPagInicial {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+    /*Fin de la forma que quiero*/
+    .tarjNoticias {
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #18520680;
+    }.tarjNoticias > h2 {
+        margin: 0px;
+        padding-left: 0px;
+    }.tarjNoticias > p {
+        color:gray;
+    }
+/*Fin de la seccion de noticias*/
