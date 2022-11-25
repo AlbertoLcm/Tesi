@@ -1,11 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
 import '../stylesheets/Home.css';
 
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <>
+      <Sidebar />
+      <div id="ContenedorHome">
+        <section className="">
+          <Link to={'/talleres'} className="link">Talleres</Link>
+        </section>
+      </div>
+    </>
   );
 }
 

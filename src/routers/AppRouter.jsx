@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import routes from "../helpers/routes";
 import Home from "../pages/Home";
+import Talleres from "../pages/Talleres";
 
 function AppRouter() {
   return (
@@ -10,7 +11,11 @@ function AppRouter() {
         <Route path={routes.home} element={
           <Home />
         } />
-
+        
+        <Route path={routes.talleres} element={
+          <Talleres />
+        } />
+        
         {/* <Route path="*" element={<Error />} /> */}
       </Routes>
     </div>
